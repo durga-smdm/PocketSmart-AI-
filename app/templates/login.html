@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Login | PocketSmart AI{% endblock %}
+
+{% block content %}
+
+<section class="features">
+
+    <h2>🔐 Login</h2>
+
+    <div class="feature-card" style="margin: auto; max-width: 400px;">
+
+        <form action="/login" method="post">
+
+            <p>
+                <label>Email</label><br>
+                <input type="email"
+                       name="email"
+                       placeholder="Enter your email"
+                       required>
+            </p>
+
+            <br>
+
+            <p>
+                <label>Password</label><br>
+                <input type="password"
+                       name="password"
+                       placeholder="Enter your password"
+                       required>
+            </p>
+
+            <br>
+
+            <button type="submit" class="btn primary-btn">
+                Login
+            </button>
+
+        </form>
+
+        <br>
+
+        <p>
+            Don't have an account?
+            <a href="/register">Register here</a>
+        </p>
+
+    </div>
+
+</section>
+
+{% endblock %}

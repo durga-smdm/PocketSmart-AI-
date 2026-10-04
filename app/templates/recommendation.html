@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Recommendation | PocketSmart AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', path='css/style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">PocketSmart AI</div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/dashboard">Dashboard</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </nav>
+
+
+    <main>
+
+        <section class="features">
+
+            <h2>🤖 {{ type }}</h2>
+
+            <div class="feature-card recommendation-card">
+
+                <h3>✨ Your AI Recommendation</h3>
+
+                <div class="recommendation-text">
+                    {{ recommendation }}
+                </div>
+
+                <br>
+
+                <a href="/dashboard" class="btn primary-btn">
+                    ← Back to Dashboard
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© 2026 PocketSmart AI | Smart Budget & Recommendation Assistant</p>
+    </footer>
+
+</body>
+</html>

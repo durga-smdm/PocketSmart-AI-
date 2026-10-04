@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% block title %}Recommendation History | PocketSmart AI{% endblock %}
+
+{% block content %}
+
+<section class="features">
+
+    <h2>📋 Recommendation History</h2>
+
+    {% if history %}
+
+        <div class="feature-container">
+
+            {% for item in history %}
+
+                <div class="feature-card">
+
+                    <h3>🤖 {{ item.recommendation_type }}</h3>
+
+                    <p>
+                        <strong>Date:</strong>
+                        {{ item.created_at }}
+                    </p>
+
+                    <hr>
+
+                    <p>
+                        <strong>Input Details:</strong>
+                    </p>
+
+                    <p>{{ item.input_data }}</p>
+
+                    <br>
+
+                    <p>
+                        <strong>AI Recommendation:</strong>
+                    </p>
+
+                    <div class="recommendation-text">
+                        {{ item.recommendation }}
+                    </div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+
+        <div class="feature-card">
+            <h3>📭 No Recommendations Yet</h3>
+            <p>
+                Your AI recommendations will appear here after you use
+                one of the planners.
+            </p>
+        </div>
+
+    {% endif %}
+
+    <br>
+
+    <a href="/dashboard" class="btn primary-btn">
+        ← Back to Dashboard
+    </a>
+
+</section>
+
+{% endblock %} 

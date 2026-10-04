@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard | PocketSmart AI{% endblock %}
+
+{% block content %}
+
+<section class="hero">
+    <div class="hero-content">
+
+        <h1>Welcome to PocketSmart AI 👋</h1>
+
+        <p>
+            Choose a planner and get smart recommendations
+            according to your budget.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="/home-planner" class="btn primary-btn">
+                🏠 Home Interior
+            </a>
+
+            <a href="/party-planner" class="btn primary-btn">
+                🎉 Party Planning
+            </a>
+
+            <a href="/jewelry-planner" class="btn primary-btn">
+                💎 Jewelry
+            </a>
+        </div>
+
+        <br>
+
+        <a href="/history" class="btn secondary-btn">
+            📋 Recommendation History
+        </a>
+
+    </div>
+</section>
+
+{% endblock %}

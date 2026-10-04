@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Home Interior Planner | PocketSmart AI{% endblock %}
+
+{% block content %}
+
+<section class="features">
+
+    <h2>🏠 Home Interior Planner</h2>
+
+    <div class="feature-card" style="margin: auto; max-width: 500px;">
+
+        <form action="/generate-home" method="post">
+
+            <p>
+                <label>Room Type</label><br>
+                <input type="text" name="room_type"
+                       placeholder="Example: Bedroom"
+                       required>
+            </p>
+
+            <br>
+
+            <p>
+                <label>Budget (₹)</label><br>
+                <input type="number" name="budget"
+                       placeholder="Example: 50000"
+                       required>
+            </p>
+
+            <br>
+
+            <p>
+                <label>Quantity</label><br>
+                <input type="number" name="quantity"
+                       placeholder="Example: 5"
+                       required>
+            </p>
+
+            <br>
+
+            <p>
+                <label>Preferences</label><br>
+                <textarea name="preferences"
+                          placeholder="Example: Modern, simple, minimal"></textarea>
+            </p>
+
+            <br>
+
+            <button type="submit" class="btn primary-btn">
+                Generate Recommendations 🤖
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

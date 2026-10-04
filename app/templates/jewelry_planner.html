@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}Jewelry Planner | PocketSmart AI{% endblock %}
+
+{% block content %}
+
+<section class="features">
+
+    <h2>💎 Jewelry Recommendation Planner</h2>
+
+    <div class="feature-card" style="margin: auto; max-width: 500px;">
+
+        <form action="/generate-jewelry" method="post">
+
+            <p>
+                <label>Budget (₹)</label><br>
+                <input type="number" name="budget"
+                       placeholder="Example: 25000"
+                       required>
+            </p>
+
+            <br>
+
+            <p>
+                <label>Occasion</label><br>
+                <input type="text" name="occasion"
+                       placeholder="Example: Wedding"
+                       required>
+            </p>
+
+            <br>
+
+            <p>
+                <label>Style</label><br>
+                <input type="text" name="style"
+                       placeholder="Example: Traditional / Modern"
+                       required>
+            </p>
+
+            <br>
+
+            <p>
+                <label>Outfit Description</label><br>
+                <textarea name="outfit_description"
+                          placeholder="Example: Red saree with golden border"></textarea>
+            </p>
+
+            <br>
+
+            <button type="submit" class="btn primary-btn">
+                Get Jewelry Recommendations 🤖
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}
